@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Деструктуризація об'єкта</title>
+</head>
+<body>
+  <h2>Результат деструктуризації:</h2>
+  <ul>
+    <li><strong>Ім'я:</strong> <span id="name"></span></li>
+    <li><strong>Вік:</strong> <span id="age"></span></li>
+    <li><strong>Адмін:</strong> <span id="isAdmin"></span></li>
+  </ul>
+
+  <script>
+    let user = { name: "Іван", years: 30};
+    let { name, years: age, isAdmin = false } = user;
+    document.getElementById("name").textContent = name;
+    document.getElementById("age").textContent = age;
+    document.getElementById("isAdmin").textContent = isAdmin;
+  </script>
+</body>
+</html>
